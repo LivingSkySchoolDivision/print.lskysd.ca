@@ -9,8 +9,7 @@ pipeline {
         stage('Git clone') {
             steps {
                 git branch: 'master',
-                    credentialsId: 'JENKINS-AZUREDEVOPS',
-                    url: "git@ssh.dev.azure.com:v3/LivingSkySchoolDivision/print.lskysd.ca/print.lskysd.ca"
+                    url: "https://sourcecode.lskysd.ca/PublicCode/print.lskysd.ca.git"
             }
         }
         stage('Docker build') {
